@@ -1,0 +1,9 @@
+[27-Jul-2015 16:25:19 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/anpac/public_html/phpscripts/EmailReader.php on line 132
+[27-Jul-2015 16:27:39 UTC] PHP Notice:  Unknown: Certificate failure for webmail.johnsonfinancialservice.com: Server name does not match certificate: /OU=Domain Control Validated/CN=*.arvixe.com (errflg=2) in Unknown on line 0
+[27-Jul-2015 16:28:40 UTC] PHP Notice:  Unknown: Certificate failure for webmail.johnsonfinancialservice.com: Server name does not match certificate: /OU=Domain Control Validated/CN=*.arvixe.com (errflg=2) in Unknown on line 0
+[27-Jul-2015 16:30:07 UTC] PHP Notice:  Unknown: Certificate failure for webmail.johnsonfinancialservice.com: Server name does not match certificate: /OU=Domain Control Validated/CN=*.arvixe.com (errflg=2) in Unknown on line 0
+[27-Jul-2015 16:31:43 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/anpac/public_html/phpscripts/EmailReader.php on line 132
+[27-Jul-2015 16:31:57 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/anpac/public_html/phpscripts/EmailReader.php on line 132
+[27-Jul-2015 16:33:47 UTC] PHP Parse error:  syntax error, unexpected T_ARRAY in /home/anpac/public_html/phpscripts/EmailReader.php on line 132
+[27-Jul-2015 16:34:52 UTC] PHP Parse error:  syntax error, unexpected T_PUBLIC in /home/anpac/public_html/phpscripts/EmailReader.php on line 149
+[27-Jul-2015 16:37:41 UTC] PHP Parse error:  syntax error, unexpected T_ARRAY in /home/anpac/public_html/phpscripts/EmailReader.php on line 132

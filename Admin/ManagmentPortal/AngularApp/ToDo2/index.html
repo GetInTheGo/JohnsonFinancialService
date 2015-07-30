@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>ToDoList</title>
+	<base href="">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="http://localhost:8888/anpac/CSS/fancySelect.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://localhost:8888/anpac/JQuery/fancySelect.js"></script>
+
+</head>
+
+<body ng-app="todolist" style="min-width:100%;">
+		<table style="min-width:100%;">
+		<tr>
+			
+			<td style="min-width:800px;max-width:1000px">
+				<section id="todoapp" ng-controller="ToDoCtrl">
+					<header id="header">
+						<h1>
+							{{selectedApplicant.name}}
+							<select class= "select-style" ng-model="selectedApplicant" style="width:200px" ng-options="applicant.name for applicant in applicants">
+							</select>
+							
+							</h1>
+						<form id="todo-form" ng-submit="addTodo()">
+							<input type="text" id="new-todo" placeholder="{{placeholder}}" autofocus autocomplete="off" ng-model="newtodo.name" required />
+							<select ng-init="newtodo.priority='low'" ng-model="newtodo.priority">
+								<option value="low">low</option>
+								<option value="normal">Normal</option>
+								<option value="high">High</option>
+							</select>
+							<select ng-init="newtodo.phase='one'" ng-model="newtodo.phase">
+								<option value="one">1</option>
+								<option value="two">2</option>
+								<option value="three">3</option>
+							</select>
+						</form>
+					</header>
+
+					<section id="main">
+						<input type="checkbox" id="toggle-all" ng-model="allchecked" ng-click="checkAll(allchecked)" />
+						<ul id="todo-list" ng-model="todos">
+							<li ng-repeat="todo in todos | filter:statusFilter|filter: { applicantid: selectedApplicant.applicantid }" ng-class="{completed: todo.completed, editing: todo.editing}" class="{{todo.priority}} animate" ng-dblclick="todo.editing=true">
+								<div class="view">
+									<input type="checkbox" class="toggle" ng-model="todo.completed" ng-click="checkTodo(todo)">
+									<label>{{todo.name}}</label>
+									<button class="destroy" ng-click="removeTodo(todo.id)"></button>
+								</div>
+								<form ng-submit="editTodo(todo)">
+									<input type="text" class="edit" ng-model="todo.name" ng-blur="editTodo(todo)">
+									<select class="edit" style="width:100px;font-size:12pt" ng-init="todo.priority= {{todo.priority}}" ng-model="todo.priority">
+										<option value="low">Low</option>
+										<option value="normal">Normal</option>
+										<option value="high">High</option>
+									</select>
+									<select class="edit" style="width:100px;font-size:12pt" ng-init="todo.phase='one'" ng-model="todo.phase">
+										<option value="one">1</option>
+										<option value="two">2</option>
+										<option value="three">3</option>
+									</select>
+									<button class="edit" ng-click="editTodo(todo)">
+										save
+									</button>
+								</form>
+							</li>
+						</ul>
+					</section>
+					<footer id="footer">
+						<span id="todo-count">
+				<strong>{{remaining}}</strong> Remaining Tasks.
+			</span>
+						<ul id="filters">
+							<li><a href="#/" ng-class="{selected : location.path() == '/'}">All</a>
+							</li>
+							<li><a href="#/active" ng-class="{selected : location.path() == '/active'}">Active</a>
+							</li>
+							<li><a href="#/done" ng-class="{selected : location.path() == '/done'}">Completed</a>
+							</li>
+						</ul>
+						<button id="clear-completed" ng-click="clearCompleted()" ng-show="completed">Completed ({{completed}})</button>
+					</footer>
+				</section>
+			</td>
+			<td style="width:107px;left">
+				<ul id="list" style="top:53px;left:-43px;display:inline-block;position:relative">
+					<li class="link">
+						<p><a href="#">All</a>
+						</p>
+						
+					</li>
+					<li class="link">
+						<p><a href="#">Phase 1</a>
+						</p>
+						
+					</li>
+					<li class="link">
+						<p><a href="#">Phase 2</a>
+						</p>
+						
+					</li>
+					<li class="link">
+						<p><a href="#">Phase 3</a>
+						</p>
+						
+					</li>
+
+				</ul>
+			</td>
+		</tr>
+	</table>
+
+
+
+	<script src="js/angular.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
+	<script src="js/app.js"></script>
+	</body>
+
+</html>

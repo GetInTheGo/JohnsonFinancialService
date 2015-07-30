@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>File Not Found</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+body {
+  background-color: #eee;
+}
+
+body, h1, p {
+  font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  margin-left:  auto;
+  margin-right:  auto;
+  margin-top: 177px;
+  max-width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row:before, .row:after {
+  display: table;
+  content: " ";
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+.col-md-push-3 {
+  margin-left: 25%;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+}
+
+.lead {
+  font-size: 21px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+a {
+  color: #3282e6;
+  text-decoration: none;
+}
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	background:url('http://loseyourselfinguatemala.com/Images/Backgrounds/AboutKids.jpg');
+}
+.wrap{
+	width:1000px;
+	margin:0 auto;	
+}
+.main{
+	text-align:center;
+	background: rgba(255, 255, 255, 0.04);
+	color:#FFF;
+	font-weight:bold;
+	margin-top:160px;
+	border:1px solid rgba(102, 102, 102, 0.31);
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+.main h3{
+	font-size:16px;
+	text-align:left;
+	padding:30px 30px;
+}
+.main h1{
+	font-size:60px;
+	margin-top:15px;
+	color:#AA8239;
+	text-transform:uppercase;
+	font-family: 'Fenix', serif;
+}
+.main p{
+	font-size:20px;
+	margin-top:15px;
+	line-height:1.6em;
+}
+.main  span.error{
+	color:#AA8239;
+	font-size:18px;
+}
+.main p span{
+	font-size:14px;
+	color:#AA8239;
+}
+.footer{
+	text-align:right;
+	padding-top:10px;
+}
+.footer p{
+	font-size:12px;
+	color:#DDD;
+}
+.footer p a{
+	font-size:13px;
+	color:#076161;
+}
+.footer p a:hover{
+	color:#0C7C7C;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	 <div class="main">
+		<h3><img alt="" id="logo" height="200" width="200" src="http://loseyourselfinguatemala.com/Images/Logos/logoLauren.png"/></h3>
+		<h1>Oops Could not find</h1>
+		<p>There's a lot of reasons why this page is<span class="error"> 404</span>.<br>
+			<span>We're great at fitness, but mediocre at web design</span></p>
+			<div class="search">
+				
+			</div>
+		<div class="icons">
+		<p>Follow us on:</p>
+		 <p style="margin-left:auto; margin-right:auto;width:200px">
+<a class="socialIcons" href="http://www.facebook.com" title="Follow on Facebook" alt="Facebook"><img src="http://loseyourselfinguatemala.com/Images/Icons/facebook-32.png" /></a>
+<a  class="socialIcons" href="http://twitter.com" title="Follow on Twitter" alt="Twitter"><img src="http://loseyourselfinguatemala.com/Images/Icons/twitter-32.png" /></a>
+<a class="socialIcons" href="http://www.flickr.com" title="Follow on Flickr" alt="Flickr"><img src="http://loseyourselfinguatemala.com/Images/Icons/flickr-32.png" /></a>
+<a class="socialIcons" href="http://www.googleplus.com" title="Follow on Google+" alt="Google+"><img src="http://loseyourselfinguatemala.com/Images/Icons/googleplus-32.png" /></a>
+<a class="socialIcons" href="http://www.instagram.com" title="Follow on Instagram" alt="Instagram"><img src="http://loseyourselfinguatemala.com/Images/Icons/instagram-32.png" /></a></p>
+	   </div>
+   </div>
+	
+  </div>
+</body>
+</html>

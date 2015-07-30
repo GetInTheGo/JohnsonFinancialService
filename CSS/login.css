@@ -1,0 +1,305 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #2c3338;
+  color: #606468;
+  font: 400 0.875rem/1.5 "Open Sans", sans-serif;
+  margin: 0;
+	 background-image: url("../Images/Backgrounds/ForestBackGround.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+	-webkit-appearance: none;
+}
+
+a {
+  color: #eee;
+  outline: 0;
+  text-decoration: none;
+}
+a:focus, a:hover {
+  text-decoration: underline;
+}
+
+input {
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color .3s;
+          transition: background-color .3s;
+}
+
+.site__container {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 0;
+	padding-bottom:0;
+	position:relative;
+	height:100%;
+	width:100%;
+	display: flex;
+	align-items: center;
+	
+
+	
+}
+
+.form input[type="password"], .form input[type="text"], .form input[type="submit"] {
+  width: 100%;
+}
+.form--login {
+  color: #D1686D;
+  font-size:1.25rem;
+}
+.form--login label,
+.form--login input[type="text"],
+.form--login input[type="password"],
+.form--login input[type="submit"] {
+  border-radius: 0.25rem 0.25rem 0 0;
+  padding: 1rem;
+}
+.form--login label {
+  background-color: #A7383E;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+	width:55px;
+}
+.form--login input[type="text"], .form--login input[type="password"] {
+  background-color: #3b4148;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.form--login input[type="text"]:focus, .form--login input[type="text"]:hover, .form--login input[type="password"]:focus, .form--login input[type="password"]:hover {
+  background-color: #434A52;
+}
+.form--login input[type="submit"] {
+  	background-color: rgba(82,92,145,.9);
+  	color: #eee;
+  	font-weight: bold;
+ 	width:100%;
+	height:80px;
+ 	text-transform: uppercase;
+	-webkit-appearance: none;
+	display:inline-block;
+	position:relative;
+	cursor:pointer;
+}
+.form--login input[type="submit"]:focus, .form--login input[type="submit"]:hover {
+  background-color: #7C84AE;
+}
+.form__field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.form__input {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.align {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.grid__container {
+  margin: 0 auto;
+  max-width: 20rem;
+  width: 90%;
+}
+.glass {
+  position: relative;
+  padding: 0 0;
+  width:100%;
+  height:100%;
+  max-height:607px;
+  min-height:450px;
+  max-width:500px;
+  margin-left:auto;
+  margin-right:auto;
+  border-bottom: 1px solid;
+  border-bottom-color: #ccc;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius:10px;
+  padding:1px;
+}
+
+.glass::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+	max-width:200px;
+  height: 100%;
+}
+.glass .legacy-ie-fix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=20)";
+}
+.titlebar
+{
+	width:100%;
+	min-height:50px;
+	text-align:center;
+	vertical-align:middle;
+	line-height:70px;
+	background-color:rgba(24,34,87,.8);
+	color: #eee;
+  	font-weight: bold;	
+  	text-transform: uppercase;
+	margin-bottom: 3rem;
+	border-radius:10px 10px 0 0;
+}
+.bottombar
+{
+	width:100%;
+	height:15px;
+	display:inline-block;
+	position:relative;
+	background-color:rgba(24,34,87,.8);
+	border-radius: 0 0 10px 10px;
+}
+.onBottom
+{
+	display:inline-block;
+	position:absolute;
+	margin-bottom:0;
+	bottom:0;
+	width:100%;
+	padding-right:2px;
+}
+
+.twrap .tooltip {
+  background: #D3696C;
+  bottom: 100%;
+  color: #fff;
+  display: block;
+  right: -25px;
+  margin-bottom: -465px;
+  opacity: 0;
+  padding: 20px;
+  pointer-events: none;
+  position: absolute;
+  z-index:99;
+  width: 100%;
+  -webkit-transform: translateY(-10px);
+     -moz-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+       -o-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.twrap .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}  
+
+/* CSS Triangles - see Trevor's post */
+.twrap .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-bottom: solid #D3696C 10px;
+  top: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+  
+.twrap:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .twrap .tooltip {
+  display: none;
+}
+
+.lte8 .twrap:hover .tooltip {
+  display: block;
+}
+.fpass + .fa-wrench
+{
+	font-size:50px;
+}

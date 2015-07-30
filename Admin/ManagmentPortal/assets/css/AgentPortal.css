@@ -1,0 +1,54 @@
+.subMenu 
+{ 
+	list-style-type: none;
+}
+/* when hiding the picture */
+.subMenu.ng-hide-add         { animation:0.25s lightSpeedOut ease; }
+
+/* when showing the picture */
+.subMenu.ng-hide-remove      { animation:0.25s lightSpeedIn ease; }
+
+.reposition
+{
+	left:300px;
+}
+
+
+/* ANIMATIONS (FROM ANIMATE.CSS) ======================== */
+/* light speed out */
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+/* light speed in */
+@keyframes lightSpeedIn {
+	0% { transform: translateX(100%) skewX(-30deg); opacity: 0; }
+	80% { transform: translateX(0%) skewX(-15deg); opacity: 1; }
+	100% { transform: translateX(0%) skewX(0deg); opacity: 1; }
+}
+@keyframes flip {
+	0% { transform: translateY(100%) rotateX(-180deg) preserve-3d; opacity: 0; }
+	80% { transform: translateY(0%) rotateX(-90deg) preserve-3d; opacity: .5; }
+	100% { transform: translateY(0%) rotateX(0deg) preserve-3d; opacity: 1;}
+}
+
+/*Emails*/
+
+.EmailPreview img
+{
+	 transition: all .5s ease;
+ 
+}
+.EmailPreview img:hover
+{
+	cursor:pointer;
+	opacity:.9;
+	box-shadow: 10px 10px 5px #888888;
+	transform: scale(1.05); 
+}

@@ -1,0 +1,45 @@
+[25-May-2015 00:12:06 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/anpac/public_html/NewSite/index.php on line 249
+[25-May-2015 00:12:59 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/anpac/public_html/NewSite/index.php on line 250
+[25-May-2015 00:13:39 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/anpac/public_html/NewSite/index.php on line 51
+[25-May-2015 00:16:09 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/anpac/public_html/NewSite/index.php on line 48
+[25-May-2015 00:16:55 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/anpac/public_html/NewSite/index.php on line 48
+[25-May-2015 00:16:59 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/anpac/public_html/NewSite/index.php on line 48
+[25-May-2015 00:18:16 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/anpac/public_html/NewSite/index.php on line 48
+[25-May-2015 00:19:37 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/anpac/public_html/NewSite/index.php on line 50
+[25-May-2015 00:20:04 America/Chicago] PHP Warning:  require_once(models/languages/en.php): failed to open stream: No such file or directory in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 00:20:04 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'models/languages/en.php' (include_path='.:/opt/php54/lib/php') in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 00:21:04 America/Chicago] PHP Warning:  require_once(models/languages/en.php): failed to open stream: No such file or directory in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 00:21:04 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'models/languages/en.php' (include_path='.:/opt/php54/lib/php') in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 00:22:01 America/Chicago] PHP Warning:  require_once(users/models/config.php): failed to open stream: No such file or directory in /home/anpac/public_html/NewSite/index.php on line 4
+[25-May-2015 00:22:01 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'users/models/config.php' (include_path='.:/opt/php54/lib/php') in /home/anpac/public_html/NewSite/index.php on line 4
+[25-May-2015 00:23:40 America/Chicago] PHP Warning:  require_once(models/languages/en.php): failed to open stream: No such file or directory in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 00:23:40 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'models/languages/en.php' (include_path='.:/opt/php54/lib/php') in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 00:25:25 America/Chicago] PHP Warning:  require_once(models/languages/en.php): failed to open stream: No such file or directory in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 00:25:25 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'models/languages/en.php' (include_path='.:/opt/php54/lib/php') in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 00:25:42 America/Chicago] PHP Warning:  require_once(models/languages/en.php): failed to open stream: No such file or directory in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 00:25:42 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'models/languages/en.php' (include_path='.:/opt/php54/lib/php') in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 00:25:58 America/Chicago] PHP Fatal error:  Call to undefined function isUserLoggedIn() in /home/anpac/public_html/NewSite/index.php on line 50
+[25-May-2015 00:30:46 America/Chicago] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/anpac/public_html/NewSite/Users/models/funcs.php on line 371
+[25-May-2015 00:51:42 America/Chicago] PHP Warning:  require_once(models/languages/en.php): failed to open stream: No such file or directory in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 00:51:42 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'models/languages/en.php' (include_path='.:/opt/php54/lib/php') in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 00:53:47 America/Chicago] PHP Warning:  require_once(models/languages/en.php): failed to open stream: No such file or directory in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 00:53:47 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'models/languages/en.php' (include_path='.:/opt/php54/lib/php') in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 01:00:11 America/Chicago] PHP Fatal error:  Call to a member function checkPermission() on a non-object in /home/anpac/public_html/NewSite/index.php on line 62
+[25-May-2015 01:00:58 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/anpac/public_html/NewSite/index.php on line 62
+[25-May-2015 01:01:15 America/Chicago] PHP Fatal error:  Call to a member function checkPermission() on a non-object in /home/anpac/public_html/NewSite/index.php on line 62
+[25-May-2015 01:02:53 America/Chicago] PHP Warning:  require_once(models/languages/en.php): failed to open stream: No such file or directory in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 01:02:53 America/Chicago] PHP Fatal error:  require_once(): Failed opening required 'models/languages/en.php' (include_path='.:/opt/php54/lib/php') in /home/anpac/public_html/NewSite/Users/models/config.php on line 42
+[25-May-2015 01:04:47 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/anpac/public_html/NewSite/index.php:2) in /home/anpac/public_html/NewSite/Users/models/config.php on line 48
+[25-May-2015 01:04:47 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/NewSite/Users/models/class.user.php on line 88
+[25-May-2015 01:06:09 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/anpac/public_html/NewSite/index.php:2) in /home/anpac/public_html/NewSite/Users/models/config.php on line 48
+[25-May-2015 01:07:30 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/anpac/public_html/NewSite/index.php:2) in /home/anpac/public_html/NewSite/Users/models/config.php on line 48
+[25-May-2015 01:09:13 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/anpac/public_html/NewSite/index.php:2) in /home/anpac/public_html/NewSite/Users/models/config.php on line 6
+[25-May-2015 01:09:13 America/Chicago] PHP Fatal error:  Call to a member function checkPermission() on a non-object in /home/anpac/public_html/NewSite/index.php on line 59
+[25-May-2015 01:38:20 America/Chicago] PHP Fatal error:  Call to a member function checkPermission() on a non-object in /home/anpac/public_html/NewSite/index.php on line 32
+[25-May-2015 01:39:01 America/Chicago] PHP Fatal error:  Call to a member function checkPermission() on a non-object in /home/anpac/public_html/NewSite/index.php on line 32
+[25-May-2015 01:39:12 America/Chicago] PHP Fatal error:  Call to a member function checkPermission() on a non-object in /home/anpac/public_html/NewSite/index.php on line 32
+[25-May-2015 01:39:45 America/Chicago] PHP Fatal error:  Call to a member function checkPermission() on a non-object in /home/anpac/public_html/NewSite/index.php on line 32
+[25-May-2015 01:40:11 America/Chicago] PHP Fatal error:  Call to a member function checkPermission() on a non-object in /home/anpac/public_html/NewSite/index.php on line 32
+[25-May-2015 01:40:21 America/Chicago] PHP Fatal error:  Call to a member function checkPermission() on a non-object in /home/anpac/public_html/NewSite/index.php on line 32
+[25-May-2015 01:41:58 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/anpac/public_html/NewSite/index.php on line 37
+[25-May-2015 17:07:28 America/Chicago] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/anpac/public_html/NewSite/Users/models/db-settings.php on line 23

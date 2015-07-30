@@ -1,0 +1,1 @@
+[26-Jul-2015 19:57:47 UTC] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (42000/1044): Access denied for user 'anpac_cody'@'localhost' to database 'anpac_Agency' in /home/anpac/public_html/Users/models/db-settings.php on line 23

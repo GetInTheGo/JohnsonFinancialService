@@ -1,0 +1,38 @@
+[25-May-2015 00:09:20 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home/anpac/public_html/NewSite/Users/index.php on line 11
+[25-May-2015 00:10:04 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/anpac/public_html/NewSite/Users/index.php on line 257
+[25-May-2015 00:10:33 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/anpac/public_html/NewSite/Users/index.php on line 256
+[25-May-2015 00:10:45 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/anpac/public_html/NewSite/Users/index.php on line 256
+[25-May-2015 00:11:18 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/anpac/public_html/NewSite/Users/index.php on line 254
+[25-May-2015 00:44:29 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/anpac/public_html/NewSite/Users/index.php on line 254
+[25-May-2015 00:45:46 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/anpac/public_html/NewSite/Users/temp.php:2) in /home/anpac/public_html/NewSite/Users/models/config.php on line 48
+[25-May-2015 00:45:46 America/Chicago] PHP Fatal error:  Call to undefined function checkPermission() in /home/anpac/public_html/NewSite/Users/temp.php on line 59
+[25-May-2015 00:46:51 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/anpac/public_html/NewSite/Users/temp.php:2) in /home/anpac/public_html/NewSite/Users/models/config.php on line 48
+[25-May-2015 00:46:51 America/Chicago] PHP Fatal error:  Call to undefined function checkPermission() in /home/anpac/public_html/NewSite/Users/temp.php on line 58
+[25-May-2015 00:49:30 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/anpac/public_html/NewSite/Users/temp.php:2) in /home/anpac/public_html/NewSite/Users/models/config.php on line 48
+[25-May-2015 00:49:30 America/Chicago] PHP Fatal error:  Call to undefined function checkPermission() in /home/anpac/public_html/NewSite/Users/temp.php on line 58
+[25-May-2015 01:47:10 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/anpac/public_html/NewSite/Users/login.php on line 9
+[25-May-2015 01:49:18 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home/anpac/public_html/NewSite/Users/login.php on line 91
+[14-Jul-2015 17:58:26 America/Chicago] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/anpac/public_html/newsite/Users/logout.php on line 36
+[17-Jul-2015 14:47:48 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 16
+[17-Jul-2015 14:47:48 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 64
+[17-Jul-2015 14:48:02 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 16
+[17-Jul-2015 14:48:02 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 64
+[17-Jul-2015 14:48:25 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 16
+[17-Jul-2015 14:48:25 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 64
+[17-Jul-2015 14:48:34 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 16
+[17-Jul-2015 14:48:34 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 64
+[17-Jul-2015 14:48:52 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 16
+[17-Jul-2015 14:48:52 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 64
+[17-Jul-2015 14:49:48 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 16
+[17-Jul-2015 14:49:48 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 64
+[17-Jul-2015 14:49:58 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 16
+[17-Jul-2015 14:49:58 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 64
+[17-Jul-2015 15:02:51 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 16
+[17-Jul-2015 15:02:51 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 64
+[17-Jul-2015 15:03:21 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 16
+[17-Jul-2015 15:03:21 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/anpac/public_html/newsite/Users/admin_pages.php on line 64
+[17-Jul-2015 17:10:37 America/Chicago] PHP Fatal error:  Call to undefined method stdClass::signupTimeStamp() in /home/anpac/public_html/newsite/Users/account.php on line 25
+[17-Jul-2015 22:57:24 America/Chicago] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/anpac/public_html/newsite/Users/models/funcs.php on line 341
+[17-Jul-2015 22:59:43 America/Chicago] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/anpac/public_html/newsite/Users/forgot-password.php on line 174
+[17-Jul-2015 22:59:46 America/Chicago] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/anpac/public_html/newsite/Users/forgot-password.php on line 174
+[17-Jul-2015 23:55:54 America/Chicago] PHP Parse error:  syntax error, unexpected 'I’m' (T_STRING), expecting ',' or ';' in /home/anpac/public_html/newsite/Users/loginold.php on line 123
