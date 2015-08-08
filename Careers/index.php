@@ -1,6 +1,6 @@
 <?php
-require_once('/home/anpac/public_html/Users/models/config.php');
-require_once('/home/anpac/public_html/Users/models/header.php');
+require_once('../Users/models/config.php');
+require_once('../Users/models/header.php');
 echo "
 	<body>
 		<div id='site-content'>
@@ -50,10 +50,9 @@ echo "
 				</div>
 				</div>
 			</div> <!-- .site-header -->
-<div class='header-banner' style='background-image:url(/Images/Backgrounds/room-jpg.jpg);height:350px'></div> 
-			<!--<div class='hero hero-slider'>
+			<div class='hero hero-slider'>
 				<ul class='slides'>
-					<li data-bg-image='../../fertile/img/billboard.jpg'>
+					<li data-bg-image='/Images/Backgrounds/MovingLife.jpg'>
 						<div class='container'>
 							<div class='slide-title'>
 								<span>blanditiis deleniti</span> <br>
@@ -61,7 +60,7 @@ echo "
 							</div>
 						</div>
 					</li>
-					<li data-bg-image='../../fertile/img/billboard.jpg'>
+					<li data-bg-image='/Images/Backgrounds/room-jpg.jpg'>
 						<div class='container'>
 							<div class='slide-title'>
 								<span>blanditiis deleniti</span> <br>
@@ -78,7 +77,7 @@ echo "
 						</div>
 					</li>
 				</ul> <!-- .slides -->
-			<!--</div> <!-- .hero-slider -->
+			</div> <!-- .hero-slider -->
 
 			<main class='main-content'>
 				<div class='fullwidth-block latest-projects-section' style='background-image: '../html5up-halcyonic/assets/css/images/bg01.jpg''>
@@ -90,7 +89,7 @@ echo "
 									<figure class='project-thumbnail'><img src='dummy/thumb-1.jpg' alt='Project 1'></figure>
 									<h3 class='project-title'><a href='#'>elit eiusmod tempor</a></h3>
 									<small class='project-subtitle'>irure dolor voluptate</small>
-									<p>Nemo enim ipsam voluptatem quia voluptas aspernatur aut odit fugit consequuntur magni dolores eos qui ratione voluptatem sequi.</p>
+									<p>Begin building the future you've always wanted, while helping others protect theres</p>
 									<a href='#' class='more-link'><img src='images/arrow.png' alt=''></a>
 								</div>
 							</div>

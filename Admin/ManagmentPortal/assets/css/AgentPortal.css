@@ -7,10 +7,15 @@
 
 /* when showing the picture */
 .subMenu.ng-hide-remove      { animation:0.25s lightSpeedIn ease; }
+.emailMenu.ng-hide-add         { animation:0.25s SpeedOut ease; }
+
+/* when showing the picture */
+.emailMenu.ng-hide-remove      { animation:0.25s SpeedIn ease; }
 
 .reposition
 {
 	left:300px;
+
 }
 
 
@@ -37,18 +42,35 @@
 	80% { transform: translateY(0%) rotateX(-90deg) preserve-3d; opacity: .5; }
 	100% { transform: translateY(0%) rotateX(0deg) preserve-3d; opacity: 1;}
 }
+@keyframes SpeedOut {
+  0% {
+    opacity: 1;
+  }
 
+  100% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 1;
+  }
+}
+/* light speed in */
+@keyframes SpeedIn {
+	0% { transform: translateX(100%); opacity: 0; }
+	80% { transform: translateX(20%); opacity: 1; }
+	100% { transform: translateX(0%); opacity: 1; }
+}
 /*Emails*/
 
 .EmailPreview img
 {
 	 transition: all .5s ease;
+	 height:290px;
+	width:190px;
  
 }
 .EmailPreview img:hover
 {
 	cursor:pointer;
-	opacity:.9;
+	opacity:1;
 	box-shadow: 10px 10px 5px #888888;
-	transform: scale(1.05); 
+	transform: scale(1.1); 
 }

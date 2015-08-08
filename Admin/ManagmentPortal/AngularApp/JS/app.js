@@ -1,4 +1,4 @@
-var ManageAgents = angular.module('ManageAgents', ['ngAnimate','ngRoute', 'ui.router']);
+var ManageAgents = angular.module('ManageAgents', ['ngAnimate','ngRoute', 'ui.router','textAngular','ui.bootstrap']);
 
 
 ManageAgents.config(function($stateProvider, $urlRouterProvider){
@@ -10,7 +10,7 @@ ManageAgents.config(function($stateProvider, $urlRouterProvider){
         .state('SendEmails', {
             url: "/SendEmail",
             templateUrl: "Test/index.php",
-		  	controller: 'userCtrl'
+		  	controller: 'emailCtrl'
         })
           
         .state('ManageAgents', {
@@ -22,10 +22,10 @@ ManageAgents.config(function($stateProvider, $urlRouterProvider){
             url: "/ToDoList",
             templateUrl: 'ToDo2/index2.html',
 		  	controller: 'userCtrl'
-        })
+        });
        
     });
-ManageAgents.controller('userCtrl', function($scope,$http) {
+ManageAgents.controller('userCtrl', function($scope,$http,$modal) {
 $scope.fName = '';
 $scope.lName = '';
 $scope.passw1 = '';
@@ -33,9 +33,25 @@ $scope.passw2 = '';
 $scope.SideBarVis ='one';
 $scope.showEmail = 'all';
 $scope.Emails = [];
-$scope.Test = 'no';
+$scope.showPopup = function (email) {
+	
+	
+    var modalInstance = $modal.open({
+      templateUrl: 'myModalContent.html',
+      controller: 'ModalInstanceCtrl',
+      size: 'lg',
+      resolve: {
+        items: function () {
+          return email;
+        }
+      }
+    });
+
+    
+  };
+   
 $http.get('../../../../../Test/index.php').success(function(data){
-		$scope.Test = 'what';
+
 		$scope.Emails = data;
 	});
 $scope.scoreClass = function(SideBarVis) {
@@ -84,5 +100,30 @@ $scope.test = function() {
        $scope.incomplete = true;
   }
 };
+
+});
+
+ManageAgents.controller('emailCtrl', function($scope,$http) {	
+$scope.EmailStatus = 'none';
+$scope.emailgeneric = function(newEmail) {
+		var formData = { to: newEmail.emailto, from : newEmail.emailfrom,subject:newEmail.Subject, message: newEmail.message, cusName: newEmail.cusName,yName:newEmail.yName};
+		var postData = 'datas='+JSON.stringify(formData);
+		$http({
+				method : 'POST',
+				url : '/Admin/ManagmentPortal/AngularApp/Partials/Emails/php/GenericSend.php',
+				data: postData,
+				headers : {'Content-Type': 'application/x-www-form-urlencoded'}  
+		});
+		$scope.EmailStatus = "sent";
+	};
+});
+ManageAgents.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
+
+  $scope.Currentemail = items;
+
+  $scope.closePopup = function () {
+     $modalInstance.dismiss('cancel');
+  };
+  
 
 });

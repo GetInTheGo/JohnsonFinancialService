@@ -1,9 +1,17 @@
+
+
 <?php
 require_once('Users/models/config.php');
 require_once('Users/models/header.php');
-echo "
+
+	echo "
+	<link href='/CSS/Menu.css' rel='stylesheet' type='text/css'>
 	<body>
-		<div id='site-content'>
+		<div id='perspective' class='perspective effect-rotateleft'>
+			<div class='container'>
+				<div class='wrapper'>
+			<p><button id='showMenu'>Show Menu</button></p>
+			<div id='site-content'>
 			<div class='site-header' style='z-index: 9'>
 				<div class='inner-header'>
 				<div class='container' style='z-index: 9; '>
@@ -240,11 +248,24 @@ echo "
 				</div> <!-- .container -->
 			</footer> <!-- .site-footer -->
 		</div>
-
+</div>
+</div>
+<nav class='outer-nav right vertical'>
+				<a href='#' class='icon-home'>Home</a>
+				<a href='#' class='icon-news'>News</a>
+				<a href='#' class='icon-image'>Images</a>
+				<a href='#' class='icon-upload'>Uploads</a>
+				<a href='#' class='icon-star'>Favorites</a>
+				<a href='#' class='icon-mail'>Messages</a>
+				<a href='#' class='icon-lock'>Security</a>
+			</nav>
+</div>
 		<script src='JQuery/plugins.js'></script>
 		<script src='JQuery/app.js'></script>
+		<script src='JQuery/Menu.js'></script>
+		<script src='JQuery/Modernizer.js'></script>
 		<script src='JQuery/Menu.js'></script>
 	</body>
 
 </html>";
-?>
+?>		

@@ -17,34 +17,55 @@ require_once('../../../../Users/models/config.php');
 			</ul>
 			
 	        <ul class="nav navbar-nav navbar-right">
-				<li class="dropdown visible-md visible-lg">
-	        		<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope-o"></i><span class="badge">{{Emails.Unread}}</span></a>
-	        		<ul class="dropdown-menu" style="max-height:400px;overflow-y: scroll;overflow-x: scroll;margin-right:-100px">
+				<li class="dropdown visible-md visible-lg" dropdown is-open="status.isopen" auto-close="disabled" >
+	        		<a dropdown-toggle ng-disabled="disabled"><i class="fa fa-envelope-o"></i><span class="badge">{{Emails.Unread}}</span></a>
+	        		<ul class="dropdown-menu" style="max-height:400px;width:400px;overflow-y: scroll;overflow-x: hidden;margin-right:-100px">
 						<li class="dropdown-menu-header">
-							<strong>{{Emails.AllEmails.from}}</strong>
-							<div class="progress thin">
-							  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-							    <span class="sr-only">30% Complete (success)</span>
-							  </div>
-							</div>
+							<strong>{{Emails.AllEmails.Total}}</strong>
 						</li>
-						<li class="avatar" ng-repeat="email in Emails.AllEmails  | orderBy :'date'">
-							<a>
+						<li class="avatar" ng-repeat="email in Emails.AllEmails" style="width:400px;border-bottom:5px;border-color:black" >
+							<a  style="width:400px">
+								<div ng-click="showPopup(email);" style="width:400px;">
 								<img class="avatar" src="../assets/img/avatar1.jpg">
-								<div>{{email.subject}}</div>
+								<div style="width:250px;overflow:hidden">{{email.subject}}</div>
 								<small>{{email.date}}</small>
-							
-								<span class="label label-info"  style="background:none;" ><i class="fa fa-navicon" style ="color:black;z-index:9999" ng-click="SideBarVis ='two'"></i></span>
-							
+								</div>
 								
+								<span class="label label-info"  style="background:none;" ><i class="fa fa-navicon" style ="color:black;z-index:9" ng-click="email.Expand =1"></i></span>
+							
+							<div class="emailMenu" ng-show="email.Expand==1" style="top:0px;display:block;position:absolute;right:0px;height:100%;width:150px;background-color:blue;z-index:10">
+									<div  style="float:left;background-color:green;position:relative;height:100%;width:40%;color:white;line-height:100%;text-align:center;vertical-align:middle"><i style="color:white" class="fa fa-mail-reply"></i></div>
+									<div  style="float:left;background-color:red;position:relative;height:100%;width:40%;line-height:100%;text-align:center;vertical-align:middle"><i style="color:white;vertical-align:middle;font-weight:bolder" class="fa fa-trash-o" ></i></div>
+									<div  ng-click="email.Expand =2" style="float:left;background-color:grey;position:relative;height:100%;width:20%;line-height:100%;text-align:center;vertical-align:middle"><i style="color:white" class="fa fa-remove" ></i></div>
+								</div>	
 							</a>
 								
-						</li>
+							</li>
 						
 						<li class="dropdown-menu-footer text-center">
-							<a href="page-inbox.html">View all messages</a>
+							<a href="page-inbox.html">{{isPopupVisible}}</a>
 						</li>	
 	        		</ul>
+			
+	
+					
+	 <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+             <button type="button" class="close" aria-hidden="true" ng-click="closePopup()">&times;</button>
+            <h3>{{Currentemail.subject}}</h3>
+        </div>
+        <div class="modal-body">
+             <strong>From:</strong> {{Currentemail.from}}<br />
+            <strong>Date:</strong> {{Currentemail.date}}<br />
+            <br />
+			<iframe src={{"/Test/GetSpecificEmail.php?id="+Currentemail.uid}} width="100%" height="300" style="border:none"></iframe>
+			
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-primary" ng-click="closePopup()">Close</a>
+        </div>
+    </script>
+
 	      		</li>
 				<li class="dropdown visible-md visible-lg">
 	        		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell-o"></i><span class="badge">3</span></a>
@@ -59,7 +80,7 @@ require_once('../../../../Users/models/config.php');
 						</li>							
                         <li class="clearfix">
 							<i class="fa fa-comment"></i> 
-                            <a href="page-activity.html" class="notification-user"> Sharon Rose </a> 
+                            <a class="notification-user" ng-click="SideBarVis ='two'"> Sharon Rose </a> 
                             <span class="notification-action"> replied to your </span> 
                             <a href="page-activity.html" class="notification-link"> comment</a>
                         </li>
@@ -124,6 +145,8 @@ require_once('../../../../Users/models/config.php');
 		</div>
 		
 	</div>
+	
+	
 <!--End Navigation Bar-->
 
 <!--Start Side Bar-->

@@ -1,50 +1,86 @@
+<style type="text/css">
+.ta-editor {
+  min-height: 300px;
+  height: auto;
+  overflow: auto;
+  font-family: inherit;
+  font-size: 100%;
+	color:Blue;
+}
+.ta-editor h1 {
+	color:black;
+}
+</style>
 <div style="width:100%; background-color:lightgrey;">
 	<div class="container" style="margin-bottom:30px; background-color:white;width:100%;padding:15px;">
 
 
-
+		<div style="background-color:rgba(5,149,213,.8); height:500px;width:100%; position:absolute; z-index:9999" ng-show=" EmailStatus =='three'">
+			
+		Email Sent
+			<span ng-click="EmailStatus = 'none'" style="color:white;margin-left:auto;margin-right:auto;display:inline-block;position:relative">Send More Email</span>
+		</div>
 		<h3>Lost Password Template</h3>
 		<h4>Using a Data Binding Template</h4>
+		<form id="send-email" ng-model='newEmail' ng-submit="emailgeneric(newEmail);EmailStatus = 'sent'">
 		<table>
 			<tr>
-				<td style="padding-right:10px;padding-bottom:5px;">Customer Name:</td>
 				<td>
-					<input type="text" ng-model="cusName" ng-init="cusName='Mr White'" placeholder="Type something" />
-					<br />
+					<table>
+						<tr>
+							<td style="padding-right:10px;padding-bottom:5px;">Customer Name:</td>
+							<td>
+								<input type="text" ng-model="newEmail.cusName" ng-init="cusName='Mr White'" placeholder="Type something" />
+								<br />
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-right:10px;padding-bottom:5px;">Subject:</td>
+							<td>
+								<input type="text" ng-model="newEmail.Subject" ng-init="newEmail.Subject='Johnson Financial'" placeholder="Type something" />
+								<br />
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-right:10px;padding-bottom:5px;">Your Name:</td>
+							<td>
+								<input type="text" ng-model="newEmail.yName" placeholder="Type something" />
+								<br />
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-right:10px;padding-bottom:5px;">To:</td>
+							<td>
+								<input type="text" ng-model="newEmail.emailto"  placeholder="Type Email" />
+								<br />
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-right:10px;padding-bottom:5px;">From:</td>
+							<td>
+								<input type="text" ng-model="newEmail.emailfrom" ng-init="newEmail.emailfrom='cody@anpac.net'" placeholder="Type something" />
+								<br />
+							</td>
+						</tr>
+					</table>
 				</td>
-			</tr>
-			<tr>
-				<td style="padding-right:10px;padding-bottom:5px;">Agency Name:</td>
-				<td>
-					<input type="text" ng-model="AgencyName" ng-init="AgencyName='Johnson Financial'" placeholder="Type something" />
-					<br />
-				</td>
-			</tr>
-			<tr>
-				<td style="padding-right:10px;padding-bottom:5px;">Your Name:</td>
-				<td>
-					<input type="text" ng-model="yName" ng-init="yName='Johnson Financial'" placeholder="Type something" />
-					<br />
-				</td>
-			</tr>
-			<tr>
-				<td style="padding-right:10px;padding-bottom:5px;">Message:</td>
-				<td>
-					<textarea style="height:200px; width=600px;" ng-model="message" ng-init="message='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae tortor non libero pretium pulvinar viverra eu diam. Ut eu ipsum eget eros auctor semper id nec diam. Praesent faucibus congue sollicitudin. Suspendisse id quam sapien. Aenean imperdiet, diam vitae venenatis iaculis, velit nibh eleifend nisi, non accumsan nulla risus vitae erat. Maecenas enim massa, pretium ut risus vitae, lacinia sodales velit. Praesent eleifend erat nec porttitor imperdiet. Curabitur maximus, ex nec hendrerit ultrices, sapien diam ultricies lectus, ut eleifend sem neque a lacus.
-
-Mauris egestas at elit laoreet eleifend. Proin maximus elementum pharetra. Maecenas nec turpis metus. Duis hendrerit dignissim eros, nec molestie est dignissim eget. Aliquam et mi vel nisi faucibus tempus. Nam vitae laoreet mi. Phasellus vel nisl vel urna vehicula condimentum. Morbi ornare risus ac nisl suscipit volutpat. Curabitur scelerisque sem ac tristique viverra. Sed finibus sed mi a feugiat. Morbi fermentum lacus non nunc blandit, eget pellentesque urna consequat. Morbi pharetra, nisi id ultricies molestie, nisl odio interdum tortor, vel eleifend lectus mi ut est.
-
-Sed posuere posuere sagittis. Curabitur eget vehicula ipsum. Ut viverra consequat mi interdum cursus. Donec sodales feugiat dolor, eget condimentum nulla tempus vitae. Praesent egestas nulla turpis, id volutpat nisi aliquet eget. Nam sed augue neque. Morbi non elit porttitor lacus efficitur rutrum ac eget tellus. Sed sed suscipit elit. In varius neque in erat hendrerit tristique. Nam vehicula accumsan dolor nec rhoncus. Aenean semper dolor velit, ac sodales dolor hendrerit ut. Mauris sapien magna, feugiat in posuere quis, congue eu justo. Morbi luctus tortor vel magna eleifend dictum.
-
-In elementum pretium tortor, a pharetra arcu placerat eget. Aliquam bibendum lacinia urna ac laoreet. Pellentesque in odio libero. Pellentesque mattis ipsum a faucibus vulputate. Donec sollicitudin enim a ultrices pretium. Integer in volutpat tellus, in efficitur tellus. Vestibulum tempor odio dictum sapien tincidunt, sed iaculis odio sagittis. Nunc faucibus semper tellus at rutrum. Maecenas magna justo, feugiat in sapien quis, viverra fermentum metus. Sed sit amet iaculis nisi.
-
-Suspendisse fermentum auctor finibus. Mauris vel elit ligula. Pellentesque erat tellus, dignissim in mi in, tempor dictum lorem. Donec ipsum magna, ultrices ut dolor in, luctus aliquet tellus. Curabitur feugiat nibh sed nisi aliquam, ac sollicitudin mi tincidunt. Donec ultricies cursus ante, ut aliquet velit ornare vitae. Mauris dui leo, venenatis at elit a, facilisis ornare purus. Praesent vestibulum leo non sem iaculis malesuada. Cras sollicitudin placerat arcu a semper. Aliquam vestibulum interdum eros, nec pharetra lorem luctus non.'"
-					placeholder="Type something"></textarea>
+				<td style='padding-left:30px; vertical-align:top'>
+					<table>
+						
+						<tr>
+							<td style="padding-right:10px;padding-bottom:5px;">Message:</td>
+						</tr>
+						<tr>
+							<td>
+						 <div text-angular="text-angular" name="htmlcontent" ng-model="newEmail.message" ta-disabled='disabled'></div>
+							</td>
+					</tr>
+					</table>
 				</td>
 			</tr>
 		</table>
 		<div style="margin-left:auto%;margin-right:auto;display:block;position:relative;">
-			<button class='button'>
+			<button type="submit" class='button'>
 				<i class="fa fa-envelope"></i>
 				Send Email
 
@@ -53,11 +89,13 @@ Suspendisse fermentum auctor finibus. Mauris vel elit ligula. Pellentesque erat 
 				<button class='button'>
 					<i class="fa fa-cloud-download"></i>
 					Download Source Code
-
 				</button>
 			</a>
-		</div>
+			
+			</div>
+		</form>
 	</div>
+	
 
 
 
@@ -200,7 +238,7 @@ Suspendisse fermentum auctor finibus. Mauris vel elit ligula. Pellentesque erat 
 					<td align="center" valign="top" bgcolor="#ffffff" width="100%">
 
 						<table cellspacing="0" cellpadding="0" width="100%">
-							<tr bgcolor="#2F88A7">
+							<tr bgcolor="#95C2E9">
 								<td style="border-bottom: 3px solid #29475F;" width="100%">
 									<center>
 										<table cellspacing="0" cellpadding="0" width="500" class="w320">
@@ -216,7 +254,7 @@ Suspendisse fermentum auctor finibus. Mauris vel elit ligula. Pellentesque erat 
 								</td>
 							</tr>
 							<tr>
-								<td background="https://www.filepicker.io/api/file/kmlo6MonRpWsVuuM47EG" bgcolor="#8b8284" valign="top" style="background: url(http://newsite.anpac.net/Images/Backgrounds/MountainBackGround1.jpg); background-size:cover;background-repeat:no-repeat; background-color: #8b8284;background-position:0 60% ">
+								<td background="https://www.filepicker.io/api/file/kmlo6MonRpWsVuuM47EG" bgcolor="#8b8284" valign="top" style="background: url(http://johnsonfinancialservice.com/Images/Backgrounds/MountainBackGround1.jpg); background-size:cover;background-repeat:no-repeat; background-color: #8b8284;background-position:0 60% ">
 									<!--[if gte mso 9]>
           <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;height:303px;">
             <v:fill type="tile" src="https://www.filepicker.io/api/file/kmlo6MonRpWsVuuM47EG" color="#8b8284" />
@@ -264,7 +302,7 @@ Suspendisse fermentum auctor finibus. Mauris vel elit ligula. Pellentesque erat 
 																	<tr>
 																		<td style="text-align: left;">
 																			<span class="important-font">
-                            												{{cusName}} <br>
+                            												{{newEmail.cusName}} <br>
                          													 </span>
 
 																		</td>
@@ -293,9 +331,9 @@ Suspendisse fermentum auctor finibus. Mauris vel elit ligula. Pellentesque erat 
 													<table cellspacing="0" cellpadding="0" width="100%">
 														<tr>
 															<td class="mobile-padding" style="text-align:left;">
-																<br>{{message}}
+																<br><div ta-bind="text" ng-model="newEmail.message" ta-readonly='disabled'></div>
 																<br>
-																<br>-{{yName}}
+																<br>-{{newEmail.yName}}
 																<br>
 																<br>
 																<br>
@@ -310,7 +348,7 @@ Suspendisse fermentum auctor finibus. Mauris vel elit ligula. Pellentesque erat 
 								</td>
 							</tr>
 							<tr>
-								<td style="background-color:#2F88A7; border-top: 3px solid #29475F;">
+								<td style="background-color:#95C2E9; border-top: 3px solid #29475F;">
 									<center>
 										<table cellspacing="0" cellpadding="0" width="500" class="w320">
 											<tr>
@@ -319,17 +357,17 @@ Suspendisse fermentum auctor finibus. Mauris vel elit ligula. Pellentesque erat 
 														<tr>
 															<td style="text-align:center;padding-top:20px;width:40px;opacity:.7">
 																<a href="#">
-																	<img src="http://newsite.anpac.net/Images/Icons/SocialMedia/twitter.png" alt="twitter" />
+																	<img src="http://johnsonfinancialservice.com/Images/Icons/SocialMedia/twitter.png" alt="twitter" />
 																</a>
 															</td>
 															<td style="text-align:center;padding-top:20px;width:40px;opacity:.7">
 																<a href="#">
-																	<img src="http://newsite.anpac.net/Images/Icons/SocialMedia/google-plus.png" alt="google plus" />
+																	<img src="http://johnsonfinancialservice.com/Images/Icons/SocialMedia/google-plus.png" alt="google plus" />
 																</a>
 															</td>
 															<td style="text-align:center;padding-top:20px;width:40px;opacity:.7">
 																<a href="#">
-																	<img src="http://newsite.anpac.net/Images/Icons/SocialMedia/facebook.png" alt="facebook" />
+																	<img src="http://johnsonfinancialservice.com/Images/Icons/SocialMedia/facebook.png" alt="facebook" />
 																</a>
 															</td>
 														</tr>

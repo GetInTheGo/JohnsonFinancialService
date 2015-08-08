@@ -11,7 +11,7 @@
 	</div>
 	<div ng-click="showEmail = 'gen'" style="display:inline-block;position:relative;text-align:center" class='EmailPreview'>
 		<span style="font-weight:bolder;font-size:20px">Generic</span><br>
-		<img src="/Images/Emails/LostPassword-png.webp"><br>
+		<img src="/Images/Emails/GenericEmail.jpg"><br>
 		
 	</div>
 </section>
@@ -19,4 +19,5 @@
         <div ng-switch-when="lpass" ng-animate="'flip'"><div ng-include="'Partials/Emails/LostPassword.php'"></div></div>
 		<div ng-switch-when="gen"><div ng-include="'Partials/Emails/Generic.html'"></div></div>
 </div>
+
 	
