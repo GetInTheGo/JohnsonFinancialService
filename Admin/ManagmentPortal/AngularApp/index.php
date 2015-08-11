@@ -44,6 +44,8 @@ if (!securePage($_SERVER['PHP_SELF'])){}
 		<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js")></script>
     	<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js")></script>
+    	<link href="/CSS/xeditable.css" rel="stylesheet">
+		<script src="/JS/xeditable.min.js"></script>
 		 <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-sanitize.min.js'></script>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.1.2/textAngular.min.js'></script>
 </head>

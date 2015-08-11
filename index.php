@@ -1,55 +1,88 @@
 <?php
 require_once('Users/models/config.php');
 require_once('Users/models/header.php');
-echo "
-	<body>
-		<div id='site-content'>
-			<div class='site-header' style='z-index: 9'>
-				<div class='inner-header'>
+?>
+<body ng-app="MainSite" scroll ng-class="{min:boolChangeClass}">
+		<div class='site-header newMenu' style='z-index: 9;' ng-hide="boolChangeClass">
+			<div class='inner-header'>
 				<div class='container' style='z-index: 9; '>
 					<a href='index.html' id='branding'>
-						<img src='Images/Logos/JohnsonFinance.png' alt='' class='logo' style='height:120px;margin-top:-20px;'>
+						<img src='/Images/Logos/JohnsonFinance.png' alt='' class='logo' style='height:120px;margin-top:-20px;'>
 						<div class='logo-text'>
 							<h1 class='site-title'><span class='GText'></span></h1>
 							<small class='site-description'><span class='GText'></span></small>
 						</div>
-					</a> <!-- #branding -->
+					</a>
+					<!-- #branding -->
 
 					<!-- Default snippet for navigation -->
 					<div class='main-navigation'>
-						<button type='button' class='menu-toggle'><i class='fa fa-bars'></i></button>
+						<button type='button' class='menu-toggle'><i class='fa fa-bars'></i>
+						</button>
 						<ul class='menu'>
-							<li class='menu-item current-menu-item'><a href='index.html'>Home</a></li>
-							<li class='menu-item'><a href='/Careers'>Careers</a></li>
-							<li class='menu-item'><a href='about.html'>About</a></li>
-							<li class='menu-item'><a href='project.html'>Agents</a></li>
-							<li class='menu-item'><a href='contact.html'>Contact</a></li>";
-							if(isUserLoggedIn()){
-								if ($loggedInUser->checkPermission(array(2))){
-								
-								echo "<li class='menu-item'><a href='Admin/ManagmentPortal/AngularApp/'>Admin</a></li>";
-								}
-								}
-								
-					echo "
-						</ul> <!-- .menu -->
-					</div> <!-- .main-navigation -->
+							<li class='menu-item current-menu-item'><a href='index.html'>Home</a>
+							</li>
+							<li class='menu-item'><a href='/Careers'>Careers</a>
+							</li>
+							<li class='menu-item'><a href='/AboutUs'>About</a>
+							</li>
+							<li class='menu-item'><a href='/Agents'>Agents</a>
+							</li>
+							<li class='menu-item'><a href='contact.html'>Contact</a>
+							</li>
+							<?php if(isUserLoggedIn()){ if ($loggedInUser->checkPermission(array(2))){ echo "
+							<li class='menu-item'><a href='Admin/ManagmentPortal/AngularApp/'>Admin</a>
+							</li>"; } } ?>
+						</ul>
+						<!-- .menu -->
+					</div>
+					<!-- .main-navigation -->
 
 					<div class='mobile-navigation'></div>
-					<div class='login-link'>";
-					if(!isUserLoggedIn())
-					{
-					 echo  "<a href='Users/loginold.php'>Log In</a>";
-					}
-					else
-					{
-						echo "<a href='Users/logout.php'>Log Out</a>";
-					}
-					echo "
+					<div class='login-link'>
+						<?php if(!isUserLoggedIn()) { echo "<a href='Users/loginold.php'>Log In</a>"; } else { echo "<a href='Users/logout.php'>Log Out</a>"; } ?>
 					</div>
 				</div>
-				</div>
-			</div> <!-- .site-header -->
+			</div>
+		</div>
+	<section class='newMenu'style="width:100%;z-index:99; position:fixed;display:block" ng-show="boolChangeClass">
+		<header class="cdHead-header">
+		<a href="#0" class="cdHead-logo"><img src="/Images/Logos/logosimp.png" alt="Logo" height= 50 style="z-index:50"></a>
+		<a href="#0" class="cdHead-3d-nav-trigger">
+			Menu
+			<span></span>
+		</a>
+	</header> <!-- .cdHead-header -->
+
+	<nav class="cdHead-3d-nav-container">
+		<ul class="cdHead-3d-nav">
+			<li class="cdHead-selected">
+				<a href="/"><i class="fa fa-home menuicon"></i><br>Home</a>
+			</li>
+
+			<li>
+				<a href="/Careers"><i class="fa fa-mortar-board menuicon"></i><br>Careers</a>
+			</li>
+	
+			<li>
+				<a href="#0"><i class="fa fa-building menuicon"></i><br>About</a>
+			</li>
+			<li>
+				<a href="/Agents"><i class="fa fa-child menuicon"></i><br>Agents</a>
+			</li>
+			<li>
+				<a href="#0"><i class="fa fa-envelope menuicon"></i><br>Contact</a>
+			</li>
+			<?php if(isUserLoggedIn()){ if ($loggedInUser->checkPermission(array(2))){ echo "
+							<li>
+							<a href='Admin/ManagmentPortal/AngularApp/'><i class='fa fa-line-chart menuicon'></i><br>Admin</a>
+							</li>"; } } ?>
+		</ul> <!-- .cdHead-3d-nav -->
+	
+		<span class="cdHead-marker color-1"></span>	
+		
+	</nav> <!-- .cdHead-3d-nav-container -->
+	</section>
 <div class='header-banner'></div> 
 			<!--<div class='hero hero-slider'>
 				<ul class='slides'>

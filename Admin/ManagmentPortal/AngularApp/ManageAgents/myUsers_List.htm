@@ -1,27 +1,76 @@
-<h3>Agents</h3>
+<div ng-controller="EditableRowCtrl">
+  <table class="table table-bordered table-hover table-condensed">
+    <tr style="font-weight: bold">
+      <td style="width:35%">First Name</td>
+      <td style="width:20%">Last Name</td>
+      <td style="width:20%">Email</td>
+      <td style="width:20%">Phone</td>
+      <td style="width:20%">Adress</td>
+      <td style="width:20%">City</td>
+      <td style="width:20%">State</td>
+      <td style="width:25%">Edit</td>
+    </tr>
+    <tr ng-repeat="user in users">
+      <td>
+        <!-- editable username (text with validation) -->
+        <span editable-text="user.fname" e-name="fname" e-form="rowform" e-required>
+          {{user.fname}}
+        </span>
+      </td>
+      <td>
+        <!-- editable status (select-local) -->
+        <span editable-text="user.lname" e-name="lname" e-form="rowform">
+          {{user.lname}}
+        </span>
+      </td>
+      <td>
+        <!-- editable group (select-remote) -->
+        <span editable-text="user.email" e-name="email" e-form="rowform">
+          {{user.email}}
+        </span>
+      </td>
+        <td>
+        <!-- editable group (select-remote) -->
+        <span editable-text="user.phone" e-name="phone" e-form="rowform">
+          {{user.phone}}
+        </span>
+      </td>
 
-<table class="table table-striped">
-  <thead><tr>
-    <th>Edit</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-	<th>Email</th>
-	<th>Username</th>
-	<th>Password</th>
-	<th>Date Hired</th>
-  </tr></thead>
-  <tbody><tr ng-repeat="user in users">
-    <td>
-      <button class="btn" ng-click="editUser(user.id)">
-        <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit
-      </button>
-    </td>
-    <td>{{ user.fName }}</td>
-    <td>{{ user.lName }}</td>
-	<td>{{ user.Email }}</td>
-	<td>{{ user.UserName }}</td>
-	<td>{{ user.Password }}</td>
-	<td>{{ user.HireDate }}</td>
-	  
-  </tr></tbody>
-</table>
+      <td>
+        <!-- editable group (select-remote) -->
+        <span editable-text="user.adress" e-name="adress" e-form="rowform">
+          {{user.adress}}
+        </span>
+      </td>
+      <td>
+        <!-- editable group (select-remote) -->
+        <span editable-text="user.city" e-name="city" e-form="rowform">
+          {{user.city}}
+        </span>
+      </td>
+      <td>
+        <!-- editable group (select-remote) -->
+        <span editable-text="user.state" e-name="state" e-form="rowform">
+          {{user.state}}
+        </span>
+      </td>
+      <td style="white-space: nowrap">
+        <!-- form -->
+        <form editable-form name="rowform" onbeforesave="saveUser($data, user.agentid)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
+          <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
+            save
+          </button>
+          <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+            cancel
+          </button>
+        </form>
+        <div class="buttons" ng-show="!rowform.$visible">
+          <button class="btn btn-primary" ng-click="rowform.$show()">edit</button>
+          <button class="btn btn-danger" ng-click="removeUser($index)">del</button>
+        </div>  
+      </td>
+    </tr>
+  </table>
+
+  <button class="btn btn-default" ng-click="addUser()">Add row</button>
+</div>

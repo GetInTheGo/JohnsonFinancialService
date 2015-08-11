@@ -44,7 +44,7 @@ require_once("class.mail.php");
 require_once("class.user.php");
 require_once("class.newuser.php");
 require_once("funcs.php");
-
+session_set_cookie_params(7200,"/");
 session_start();
 
 //Global User Object Var

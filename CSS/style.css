@@ -1894,3 +1894,10 @@ form input[type="submit"], form button, form input[type="reset"] {
 	top:0px;
 	display:inline-block;
 }
+.menuicon
+{
+	font-size:50px;
+	margin-bottom:10px;
+	color:rgb(188,10,12);
+	color:rgba(188,10,12,.5);
+}

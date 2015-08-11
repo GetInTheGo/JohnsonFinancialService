@@ -1,8 +1,8 @@
 <?php
 require_once('../Users/models/config.php');
 require_once('../Users/models/header.php');
-echo "
-	<body>
+?>
+	<body ng-app="MainSite" scroll ng-class="{min:boolChangeClass}">
 		<div id='site-content'>
 			<div class='site-header' style='z-index: 9'>
 				<div class='inner-header'>
@@ -23,7 +23,8 @@ echo "
 							<li class='menu-item current-menu-item'><a href='news.html'>Careers</a></li>
 							<li class='menu-item'><a href='about.html'>About</a></li>
 							<li class='menu-item'><a href='project.html'>Agents</a></li>
-							<li class='menu-item'><a href='contact.html'>Contact</a></li>";
+							<li class='menu-item'><a href='contact.html'>Contact</a></li>
+							<?php
 							if(isUserLoggedIn()){
 								if ($loggedInUser->checkPermission(array(2))){
 								
@@ -31,12 +32,13 @@ echo "
 								}
 								}
 								
-					echo "
+					?>
 						</ul> <!-- .menu -->
 					</div> <!-- .main-navigation -->
 
 					<div class='mobile-navigation'></div>
-					<div class='login-link'>";
+					<div class='login-link'>
+						<?php
 					if(!isUserLoggedIn())
 					{
 					 echo  "<a href='/Users/loginold.php'>Log In</a>";
@@ -45,11 +47,49 @@ echo "
 					{
 						echo "<a href='/Users/logout.php'>Log Out</a>";
 					}
-					echo "
+					?>
 					</div>
 				</div>
 				</div>
 			</div> <!-- .site-header -->
+			<section class='newMenu'style="width:100%;z-index:99; position:fixed;display:block" ng-show="boolChangeClass">
+		<header class="cdHead-header">
+		<a href="#0" class="cdHead-logo"><img src="/Images/Logos/logosimp.png" alt="Logo" height= 50 style="z-index:50"></a>
+		<a href="#0" class="cdHead-3d-nav-trigger">
+			Menu
+			<span></span>
+		</a>
+	</header> <!-- .cdHead-header -->
+
+	<nav class="cdHead-3d-nav-container">
+		<ul class="cdHead-3d-nav">
+			<li >
+				<a href="/"><i class="fa fa-home menuicon"></i><br>Home</a>
+			</li>
+
+			<li class="cdHead-selected">
+				<a href="/Careers"><i class="fa fa-mortar-board menuicon"></i><br>Careers</a>
+			</li>
+	
+			<li>
+				<a href="#0"><i class="fa fa-building menuicon"></i><br>About</a>
+			</li>
+			<li>
+				<a href="/Agents"><i class="fa fa-child menuicon"></i><br>Agents</a>
+			</li>
+			<li>
+				<a href="#0"><i class="fa fa-envelope menuicon"></i><br>Contact</a>
+			</li>
+			<?php if(isUserLoggedIn()){ if ($loggedInUser->checkPermission(array(2))){ echo "
+							<li>
+							<a href='Admin/ManagmentPortal/AngularApp/'><i class='fa fa-line-chart menuicon'></i><br>Admin</a>
+							</li>"; } } ?>
+		</ul> <!-- .cdHead-3d-nav -->
+	
+		<span class="cdHead-marker color-1"></span>	
+		
+	</nav> <!-- .cdHead-3d-nav-container -->
+	</section>
 			<div class='hero hero-slider'>
 				<ul class='slides'>
 					<li data-bg-image='/Images/Backgrounds/MovingLife.jpg'>

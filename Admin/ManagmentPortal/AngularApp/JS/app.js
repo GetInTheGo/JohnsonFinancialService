@@ -1,4 +1,4 @@
-var ManageAgents = angular.module('ManageAgents', ['ngAnimate','ngRoute', 'ui.router','textAngular','ui.bootstrap']);
+var ManageAgents = angular.module('ManageAgents', ['ngAnimate','ngRoute', 'ui.router','textAngular','ui.bootstrap','xeditable']);
 
 
 ManageAgents.config(function($stateProvider, $urlRouterProvider){
@@ -14,7 +14,7 @@ ManageAgents.config(function($stateProvider, $urlRouterProvider){
         })
           
         .state('ManageAgents', {
-            url: "/AgentLis",
+            url: "/AgentList",
             templateUrl: 'ManageAgents/index.html',
 		  	controller: 'userCtrl'
         })
@@ -126,4 +126,40 @@ ManageAgents.controller('ModalInstanceCtrl', function ($scope, $modalInstance, i
   };
   
 
+});
+ManageAgents.controller('EditableRowCtrl', function($scope, $filter, $http) {
+  $scope.users = []
+    
+  $http.get('/phpscripts/GetAgents.php').success(function(data){
+		$scope.users = data;
+	});
+
+   
+  $scope.saveUser = function(data, id) {
+	  angular.extend(data, {id: id});
+	  var formData = {agentid: data.id, fname : data.fname,lname:data.lname,email:data.email,phone:data.phone,adress:data.adress,city:data.city,state:data.state};
+		var postData = 'datas='+JSON.stringify(formData);
+		$http({
+				method : 'POST',
+				url : '/phpscripts/updateagent.php',
+				data: postData,
+				headers : {'Content-Type': 'application/x-www-form-urlencoded'}  
+		});
+  };
+
+  // remove user
+  $scope.removeUser = function(index) {
+    $scope.users.splice(index, 1);
+  };
+
+  // add user
+  $scope.addUser = function() {
+    $scope.inserted = {
+      id: $scope.users.length+1,
+      name: '',
+      status: null,
+      group: null 
+    };
+    $scope.users.push($scope.inserted);
+  };
 });
